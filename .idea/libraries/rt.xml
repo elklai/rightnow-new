@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="rt">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Documents/GitHub/google-lib/googlelib/rt.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/google-lib/googlelib/picocog.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/google-lib/googlelib/mongo-java-driver-3.10.1.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/google-lib/googlelib/junit-3.8.1.jar!/" />
+      <root url="jar://$USER_HOME$/Documents/GitHub/google-lib/googlelib/gson-2.6.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
