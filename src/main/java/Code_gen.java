@@ -272,7 +272,6 @@ public class Code_gen {
         return "try{"+
                 "if ("+stat+")\n"+
                 "{\n\t"+
-                "System.out.println(db.getApp_user());\n"+
                 "db.getApp_user().add_right(\"סיוע משפטי\");\n"+
                 "}\n"+
                 "}\n"+

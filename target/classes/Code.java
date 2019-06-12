@@ -12,11 +12,32 @@ import com.mongodb.client.model.Projections;
 public class Code implements DoStuff{
 MongoDataBase db =MongoDataBase.getInstance();
 public String doStuff(){
+if(!db.is_user_achived_right("סיוע רפואי")){
+if(!db.is_user_achived_right("דיור ציבורי")){
 if(!db.is_user_achived_right("סיוע משפטי")){
-try{if ( db.get_ivar("var2") < 10)
+try{if ( db.get_svar("var17").equals("קצר"))
 {
-	System.out.println(db.getApp_user());
-db.getApp_user().add_right("סיוע משפטי");
+	db.getApp_user().add_right("סיוע משפטי");
+}
+}
+catch(NumberFormatException e){}
+try{if ( db.get_svar("var17").equals("ארוך") && db.get_svar("var18").equals("תשובה") && db.get_svar("var19").equals("תשובה") && db.get_svar("var20").equals("תשובה") && db.get_svar("var21").equals("תשובה") && db.get_svar("var22").equals("תשובה") && db.get_svar("var23").equals("תשובה") && db.get_ivar("var24") < 0)
+{
+	db.getApp_user().add_right("סיוע משפטי");
+}
+}
+catch(NumberFormatException e){}
+
+}try{if ( db.get_svar("var17").equals("קצר"))
+{
+	db.getApp_user().add_right("סיוע משפטי");
+}
+}
+catch(NumberFormatException e){}
+
+}try{if ( db.get_svar("var17").equals("קצר"))
+{
+	db.getApp_user().add_right("סיוע משפטי");
 }
 }
 catch(NumberFormatException e){}
