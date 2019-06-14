@@ -67,6 +67,7 @@ public class Code_gen {
         while(iter_r.hasNext())
         {
             Right r = iter_r.next();
+            String output1 = "";
             for(String s:r.getFormulas())
             {
                 List<String> parts = Arrays.asList(s.split(" "));
@@ -83,9 +84,9 @@ public class Code_gen {
                         way+=" "+fixed_parts.get(i);
                     }
                 }
-                output+=make_if_statment(way);
+                output1 += make_if_statment(way);
             }
-            output = surround_with_if_right_achived(output,r.getRight_name());
+            output += surround_with_if_right_achived(output1,r.getRight_name());
         }
         return output;
     }

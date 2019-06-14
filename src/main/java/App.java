@@ -16,7 +16,7 @@ public class  App
         User_App ron = null;
         MongoDataBase db =MongoDataBase.getInstance();
         MongoCollection<User_App> app_users=db.getApp_users();
-        Bson d1 = new Document("id","1");
+        Bson d1 = new Document("id",args[0]);
         FindIterable<User_App> findIterable_a = app_users.find(d1);
         MongoCursor<User_App> iter_a = findIterable_a.iterator();
         while(iter_a.hasNext())

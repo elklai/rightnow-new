@@ -12,8 +12,6 @@ import com.mongodb.client.model.Projections;
 public class Code implements DoStuff{
 MongoDataBase db =MongoDataBase.getInstance();
 public String doStuff(){
-if(!db.is_user_achived_right("סיוע רפואי")){
-if(!db.is_user_achived_right("דיור ציבורי")){
 if(!db.is_user_achived_right("סיוע משפטי")){
 try{if ( db.get_svar("var17").equals("קצר"))
 {
@@ -28,14 +26,16 @@ try{if ( db.get_svar("var17").equals("ארוך") && db.get_svar("var18").equals(
 }
 catch(NumberFormatException e){}
 
-}try{if ( db.get_svar("var17").equals("קצר"))
+}if(!db.is_user_achived_right("דיור ציבורי")){
+try{if ( db.get_svar("var17").equals("קצר"))
 {
 	db.getApp_user().add_right("סיוע משפטי");
 }
 }
 catch(NumberFormatException e){}
 
-}try{if ( db.get_svar("var17").equals("קצר"))
+}if(!db.is_user_achived_right("סיוע רפואי")){
+try{if ( db.get_svar("var17").equals("קצר"))
 {
 	db.getApp_user().add_right("סיוע משפטי");
 }
