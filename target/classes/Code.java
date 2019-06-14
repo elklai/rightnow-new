@@ -29,7 +29,7 @@ catch(NumberFormatException e){}
 }if(!db.is_user_achived_right("דיור ציבורי")){
 try{if ( db.get_svar("var17").equals("קצר"))
 {
-	db.getApp_user().add_right("סיוע משפטי");
+	db.getApp_user().add_right("דיור ציבורי");
 }
 }
 catch(NumberFormatException e){}
@@ -37,7 +37,7 @@ catch(NumberFormatException e){}
 }if(!db.is_user_achived_right("סיוע רפואי")){
 try{if ( db.get_svar("var17").equals("קצר"))
 {
-	db.getApp_user().add_right("סיוע משפטי");
+	db.getApp_user().add_right("סיוע רפואי");
 }
 }
 catch(NumberFormatException e){}

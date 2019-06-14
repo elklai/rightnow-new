@@ -84,7 +84,7 @@ public class Code_gen {
                         way+=" "+fixed_parts.get(i);
                     }
                 }
-                output1 += make_if_statment(way);
+                output1 += make_if_statment(way,r);
             }
             output += surround_with_if_right_achived(output1,r.getRight_name());
         }
@@ -268,12 +268,12 @@ public class Code_gen {
         return "if(!db.is_user_achived_right(\""+right_name+"\")){\n" + output + "\n}";
     }
 
-    public String make_if_statment(String stat)
+    public String make_if_statment(String stat,Right r)
     {
         return "try{"+
                 "if ("+stat+")\n"+
                 "{\n\t"+
-                "db.getApp_user().add_right(\"סיוע משפטי\");\n"+
+                "db.getApp_user().add_right(\""+r.getRight_name()+"\");\n"+
                 "}\n"+
                 "}\n"+
                 "catch(NumberFormatException e){}\n";
