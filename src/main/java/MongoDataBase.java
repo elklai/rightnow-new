@@ -117,11 +117,13 @@ public class MongoDataBase {
         signs.put("+", "+");
         signs.put(">", ">");
         signs.put("<", "<");
-        signs.put("-", "-");
+        signs.put("–", "-");
         signs.put("/", "/");
         signs.put("*", "*");
         signs.put("^", "^");
         signs.put("%", "%");
+        signs.put("(","(");
+        signs.put(")",")");
 
     }
 

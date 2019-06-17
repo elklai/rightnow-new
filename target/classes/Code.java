@@ -13,13 +13,7 @@ public class Code implements DoStuff{
 MongoDataBase db =MongoDataBase.getInstance();
 public String doStuff(){
 if(!db.is_user_achived_right("סיוע משפטי")){
-try{if ( db.get_svar("var17").equals("קצר"))
-{
-	db.getApp_user().add_right("סיוע משפטי");
-}
-}
-catch(NumberFormatException e){}
-try{if ( db.get_svar("var17").equals("ארוך") && db.get_svar("var18").equals("תשובה") && db.get_svar("var19").equals("תשובה") && db.get_svar("var20").equals("תשובה") && db.get_svar("var21").equals("תשובה") && db.get_svar("var22").equals("תשובה") && db.get_svar("var23").equals("תשובה") && db.get_ivar("var24") < 0)
+try{if ( db.get_svar("var6").equals("רווק") && db.get_ivar("var9").equals(0) && ( 67 * 105.81 ) + ( ( 6 * 105.81 ) * ( db.get_ivar("var7") - 2 ) ) > ( db.get_ivar("var2") + db.get_ivar("var3") ) && db.get_svar("var10").equals("רכב") && db.get_svar("var13").equals("כן") && ( 2 / db.get_ivar("var12") ) < 31740)
 {
 	db.getApp_user().add_right("סיוע משפטי");
 }
@@ -30,14 +24,6 @@ catch(NumberFormatException e){}
 try{if ( db.get_svar("var17").equals("קצר"))
 {
 	db.getApp_user().add_right("דיור ציבורי");
-}
-}
-catch(NumberFormatException e){}
-
-}if(!db.is_user_achived_right("סיוע רפואי")){
-try{if ( db.get_svar("var17").equals("קצר"))
-{
-	db.getApp_user().add_right("סיוע רפואי");
 }
 }
 catch(NumberFormatException e){}
